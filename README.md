@@ -7,33 +7,35 @@ NovGMDeep is a one-dimensional deep convolutional neural network model for genom
 <img width="200" src="Pictures/NovGMDeep.png">
 </p>    
 
-## Install
-Python 3.9
+## Installation
+Ensure you have Python 3.9 installed. Install required packages using:
 ```
 pip install -r requirements.txt
 ```
 
 ## Data
-The full VCF variant files containing the structural variants data for A. thaliana samples are publicly available on European Variation Archive https://www.ebi.ac.uk/ena/browser/view/ERZ1458872?show=analyses (PRJEB38975). \
-Please use the following link to download the zipped folder to use the CSV files directly for the structural variants data. The folder contains three files 'Deletions.csv', 'Duplications.csv', and 'Inversions.csv'. \
+Access the full VCF variant files containing structural variants data for A. thaliana samples from the European Variation Archive  https://www.ebi.ac.uk/ena/browser/view/ERZ1458872?show=analyses (PRJEB38975). \
+Download the zipped folder containing CSV files with structural variants data: 'Deletions.csv', 'Duplications.csv', and 'Inversions.csv'. \
 https://drive.google.com/file/d/1iW-Hv3iYa8KJBEnoBhxz3j0jWLebC0la/view?usp=drive_link \
-The phenotype data of Flowering time of A. thaliana samples can be found in the file "FT10_arabi.csv".
+Phenotype data for Flowering time of A. thaliana samples can be found in the file "FT10_arabi.csv".
 
 ## Usage
 1. Data Preprocessing
-> Script for selecting high-quality genotypes: quality_based_selection.ipynb \
-> Script for making the data input-ready to the model: data_processing.ipynb
+> Select high-quality genotypes: Refer to `quality_based_selection.ipynb`. \
+> Prepare data for model input: Refer to `data_processing.ipynb`.
 
 2. Data Split
-> Script for splitting training and testing datasets: sv_data_split.py  
+> Split training and testing datasets: Execute `sv_data_split.py`. 
 
 3. Train the Model
-> Script for training: sv_model_train.py  
+> Train the model: Execute `sv_model_train.py`. 
 
 4. Test the Model
-> Script for testing: sv_model_train.py 
+> Test the trained model: Execute `sv_model_train.py`.
+
 
 ## Citation
+If you use this work in your research, please cite:
 ```
 @article{sehrawat2023predicting,
   title={Predicting phenotypes from novel genomic markers using deep learning},
